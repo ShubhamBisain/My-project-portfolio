@@ -19,11 +19,8 @@
      This galvanic skin response project uses an LM358 configured as a comparator to translate small changes in skin resistance into a clear logic‑level indication that can drive LEDs and a transistor output stage.
     </p>
   
-    <p class="objective">
-      Components Used:
-    </p>
 
-    <p>
+    <p class="objective">
         Project Overview:
     </p>
 
@@ -35,21 +32,21 @@
         In this project, The LM324 expands the single LM358 threshold into multiple levels, while the NPN transistors act as current amplifiers and switches to drive the LED indicators without loading the comparator outputs
     </p>
 
-    <p>
+    <p class="objective">
      LM358 comparator function:
 
     <p>
         In comparator mode, the LM358 compares the instantaneous skin‑voltage from the divider with the adjustable reference; when the skin resistance drops (higher conductance from stress), the divider voltage crosses the threshold and the LM358 output saturates toward the supply rail. By tuning the potentiometer, the threshold can be calibrated to the nominal skin resistance of the subject so the circuit is sensitive to relative changes rather than absolute values. 
     </p>
 
-    <p>
+    <p class="objective">
       Signal conditioning and indication:
     </p>
 
     <p>
       The LM358 output drives an NPN transistor, which in turn powers an LED or LED bar segment block so that small analog variations in skin resistance become a robust visual indication that is not heavily loaded by the comparator itself. Additional comparator channels and LEDs in the schematic create multiple “levels” of response, allowing the circuit to show gradations of arousal instead of a single binary output.
     </p>
-    <p>
+    <p class="objective">
       Function of the NPN transistors:
     </p>
 
@@ -59,7 +56,7 @@
     <p>
       The transistor stage also isolates the sensitive skin‑signal and reference network from load variations, so changes in LED current do not disturb the comparator thresholds or the voltage divider that senses skin resistance.
     </p>
-    <p>
+    <p class="objective">
       Function of the LM324
     </p>
     <p>
@@ -73,7 +70,7 @@
   
     <video src="GSR1.mp4" controls></video>
     <video src="GSR2.mp4" controls></video>
-    <p>
+    <p class="objective">
       Summary about this project:
     </p>
     <p class="objective">
@@ -88,3 +85,4 @@
   </footer>
 </body>
 </html>
+
