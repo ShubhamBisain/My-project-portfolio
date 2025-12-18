@@ -29,14 +29,14 @@
       </p> 
 
       <p>
-        In this project, The LM324 expands the single LM358 threshold into multiple levels, while the NPN transistors act as current amplifiers and switches to drive the LED indicators without loading the comparator outputs
+        In this project, the LM324 expands the single LM358 threshold into multiple levels, while the NPN transistors act as current amplifiers and switches to drive the LED indicators without loading the comparator outputs
     </p>
 
     <p class="objective">
      LM358 comparator function:
 
     <p>
-        In comparator mode, the LM358 compares the instantaneous skin‑voltage from the divider with the adjustable reference; when the skin resistance drops (higher conductance from stress), the divider voltage crosses the threshold and the LM358 output saturates toward the supply rail. By tuning the potentiometer, the threshold can be calibrated to the nominal skin resistance of the subject so the circuit is sensitive to relative changes rather than absolute values. 
+        In comparator mode, the LM358 compares the instantaneous skin voltage from the divider with the adjustable reference; when the skin resistance drops (higher conductance from stress), the divider voltage crosses the threshold and the LM358 output saturates toward the supply rail. By tuning the potentiometer, the threshold can be calibrated to the nominal skin resistance of the subject so the circuit is sensitive to relative changes rather than absolute values. 
     </p>
 
     <p class="objective">
@@ -66,7 +66,10 @@
     <p>
       By carefully choosing the reference voltages (via resistor networks or potentiometers), the LM324 stages grade the response: lower comparators light the first LEDs for small conductance changes, while higher‑threshold comparators activate additional LEDs and transistors as the galvanic skin response increases.
     </p>
-   
+     <p class="objective">
+      Schematic:
+    </p>
+    <img src="schematic.jpeg" alt="Project 4">
   
     <video src="GSR1.mp4" controls></video>
     <video src="GSR2.mp4" controls></video>
@@ -85,5 +88,6 @@
   </footer>
 </body>
 </html>
+
 
 
