@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levitating Magnet</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+  <body>
+  <div class="container">
+    <h1>Levitating Magnet: Closed‑Loop Electromagnetic Position Control</h1>
+    
+ 
+    <p class="objective">
+     One‑line teaser:
+     </p>
+
+     <p>
+      Real‑time stabilisation of a floating permanent magnet using an Atmega88‑based feedback controller, Hall sensor position feedback, and PWM‑driven electromagnet actuation.​
+     </p>
+  
+    <p class="objective">
+      Project Description:
+    </p>
+
+    <p>
+        This project implements a closed‑loop control system that levitates a permanent magnet in mid‑air by precisely balancing gravitational and electromagnetic forces. An Atmega88 microcontroller reads a Hall effect sensor, runs P, PD, and PID controllers, and drives the electromagnet via PWM to keep the magnet at a configurable target height in real time.
+
+    </p>
+
+    <p class=" objective">
+      System built:
+     <ul>
+        <li>A robust experimental setup with fixed magnet, electromagnet, and optimally placed Hall sensor for accurate position measurement.​</li>
+        <li> Embedded C firmware for the Atmega88 handling hardware initialisation (UART, LEDs, Hall sensor, magnet driver), calibration, and continuous control loop execution.
+    </li>
+    <li>
+       Multiple controller variants (P, PD, PID) with tunable gains to compare responsiveness, stability, overshoot, and steady‑state error on the same hardware platform.
+    </li>
+      </ul>
+
+    </p>
+
+    <p class="objective">
+      Technical highlights
+    
+      <ul>
+        <li>Implemented automated calibration that sweeps the electromagnet current from 0 to 255, logging Hall sensor readings to build a position–field map used for later control.</li>
+        <li> Designed a proportional controller and then extended it to PD and full PID by adding derivative and integral terms, including explicit handling of error, last error, and accumulated error in fixed‑point arithmetic.
+    </li>
+    <li>
+      Performed manual gain tuning (Kp, Ki, Kd) based on live system response, optimising for fast settling, minimal overshoot, and robust recovery from external disturbances to the floating magnet.
+    </li>
+      </ul>
+
+    </p>
+
+    <p class=" objective">
+      Outcome and impact
+ 
+    <ul>
+        <li>Achieved stable, repeatable magnetic levitation at defined setpoints, with LED feedback clearly indicating stability or instability states during operation.</li>
+        <li> Demonstrated practical experience in translating control‑theory concepts into working embedded code, including calibration strategy, saturation handling, and real‑time actuation on resource‑constrained microcontrollers.
+    </li>
+      </ul>
+
+    </p>
+  <p class ="objective">Control formulas:</p>
+<ul>
+  <li>
+    P controller:
+    <code>power = Kp * error</code>
+  </li>
+  <li>
+    PD controller:
+    <code>power = Kp * error + Kd * (error - last_error)</code>
+  </li>
+  <li>
+    PID controller:
+    <code>power = Kp * error + Ki * Σerror + Kd * (error - last_error)</code>
+  </li>
+</ul>
+
+    <p class="objective">PD controller
+    </p>
+
+    <video src="PD.mp4" controls></video>
+    <p class="objective">PID controller
+    </p>
+    <video src="PID.mp4" controls></video>
+
+    <p class="objective">
+      Summary
+      <ul>
+        <li>Logic:
+
+          Two phases are implemented:
+          LEDs turn ON sequentially from top to bottom.
+          Once all LEDs are ON, they begin turning OFF in reverse order.</li>
+        <li> Extendable Design: Easily customizable to include more patterns, LEDs, or even IoT controls for remote operation.</li>
+        <li> Dynamic Lighting Effects: Displays smooth, programmable lighting patterns for decorative or functional purposes.</li>
+      </ul>
+
+    </p>
+
+    <a href="index.html">Back to Portfolio</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio. All Rights Reserved by Shubham Bisain.</p>
+  </footer>
+</body>
+</html>
