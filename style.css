@@ -1,0 +1,39 @@
+```css
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.font-code {
+    font-family: 'Fira Code', monospace;
+}
+
+/* Glassmorphism Effect */
+.glass-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Custom Animation for Typing Cursor */
+.animate-blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Smooth transition for a modern feel */
+* {
+    transition: all 0.2s ease-in-out;
+}
+```
